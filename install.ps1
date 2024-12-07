@@ -15,7 +15,14 @@ function PromptUser {
 
 # Prompt user for each required parameter
 $containerName = PromptUser -PromptText "Enter the Mongo Express container name" -DefaultValue "mongo-express"
-$networkName = PromptUser -PromptText "Enter the network name" -DefaultValue "general"\$mongoExpressPort = PromptUser -PromptText "Enter the Mongo Express port" -DefaultValue "8081"\$mongodbServer = PromptUser -PromptText "Enter the MongoDB server name" -DefaultValue "mongodb"\$adminUsername = PromptUser -PromptText "Enter the MongoDB admin username" -DefaultValue "admin"\$adminPassword = PromptUser -PromptText "Enter the MongoDB admin password" -DefaultValue "admin123"\$basicAuthUsername = PromptUser -PromptText "Enter the Mongo Express basic auth username" -DefaultValue "user"\$basicAuthPassword = PromptUser -PromptText "Enter the Mongo Express basic auth password" -DefaultValue "pass"\$allowHost = PromptUser -PromptText "Enter the allowed host (Default: 0.0.0.0)" -DefaultValue "0.0.0.0"
+$networkName = PromptUser -PromptText "Enter the network name" -DefaultValue "general"
+$mongoExpressPort = PromptUser -PromptText "Enter the Mongo Express port" -DefaultValue "8081"
+$mongodbServer = PromptUser -PromptText "Enter the MongoDB server name" -DefaultValue "mongodb"
+$adminUsername = PromptUser -PromptText "Enter the MongoDB admin username" -DefaultValue "admin"
+$adminPassword = PromptUser -PromptText "Enter the MongoDB admin password" -DefaultValue "admin123"
+$basicAuthUsername = PromptUser -PromptText "Enter the Mongo Express basic auth username" -DefaultValue "user"
+$basicAuthPassword = PromptUser -PromptText "Enter the Mongo Express basic auth password" -DefaultValue "pass"
+$allowHost = PromptUser -PromptText "Enter the allowed host (Default: 0.0.0.0)" -DefaultValue "0.0.0.0"
 
 # Generate the .env file
 Write-Host "Creating .env file for Mongo Express setup..." -ForegroundColor Green
